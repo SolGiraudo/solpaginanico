@@ -1,0 +1,564 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    font-family: 'Alata', sans-serif;
+    
+}
+
+:root{
+    --color-1: #8F6A4D;
+    --color-2: #9D8169;
+    --color-3: #C7B5A9;
+    --color-4: #A0846C;
+    color-amarillo: #FFCA00;--
+    --color-negro: #031119;
+    --color-naranja: #fb8500;
+}
+
+body{
+    background-color: white;
+    user-select: none;
+}
+
+/*SCROLL*/
+
+body::-webkit-scrollbar {
+    width: 10px;         
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--color-negro);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color-amarillo);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 1px solid white;  /* creates padding around scroll thumb */
+}
+
+ /*GENERAL */
+
+.wsp{
+    position: fixed;
+    top: 75%;
+    left: 94%;
+}
+
+.whatsapp{
+    width: 7rem;
+    height: 7rem;
+    opacity: 40%;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.whatsapp:hover{
+    opacity: 100%;
+}
+
+.section__title{
+    font-size: 5rem;
+    text-align: center;
+    font-weight: bold;
+    color: var(--color-negro);
+    margin-bottom: 2rem;
+}
+
+.nosotros, .portfolio, .servicios, .contacto, .principal{
+    padding: 2rem 0;
+}
+
+/* BOOTSTRAP NAV */
+
+nav{
+    background-color: black;
+    border-bottom: 1px solid var(--color-amarillo);
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: lighter;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    transition: 0.2s;
+    margin: 0 1rem;
+}
+
+.nav-link:hover{
+    color: var(--color-amarillo);
+}
+
+.navbar-toggler{
+    width: 7rem;
+    height: 5rem;
+}
+
+.navbar-nav{
+    text-align: center;
+}
+
+.navbar-toggler-icon{
+    color: rgb(255, 255, 255);
+}
+
+.logo{
+    width: 6.5rem;
+    height: 6.5rem;
+    margin: 0 1rem;
+    transition: 0.25s;
+    border: none;
+    border-radius: 100%;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+/* MAIN */
+
+    /*CONTAINER PRINCIPAL*/
+
+.container__blur{
+    backdrop-filter: blur(50px);
+    width: 100%;
+    height: 100vh;
+}
+
+.principal{
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0;
+    background-size: contain;
+}
+
+.principal__blur{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(2px);
+}
+
+.principal__logo{
+    border: 2px solid var(rgb(255, 255, 255));
+    border-radius: 100%;
+}
+
+    /* NOSOTROS */
+
+.nosotros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position:right;
+    background-size: 25%;
+}
+
+h1{
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.nosotros__texto{
+    width: 80%;
+    margin: 5rem 0;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    padding: 1.5rem 0 ;
+}
+
+.text{
+    color: var(--color-negro);
+    text-align: center;
+    padding: 0.5rem 0;
+    font-size: 2.5rem;
+}
+
+    /* PORTFOLIO */
+
+.portfolio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../multimedia/backgrounds/information-technology-specialist-at-work.png);
+    background-repeat: no-repeat;
+    background-position:left;
+    background-size: 75%;
+}
+        /* GALERIA*/
+
+        .galeria{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .galeria a{
+            height: 200px;
+            width: 350px;
+            margin: 20px;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow:
+            2.8px 2.8px 13.8px rgba(0, 0, 0, 0),
+            6.7px 6.7px 33.3px rgba(0, 0, 0, 0),
+            12.5px 12.5px 62.6px rgba(0, 0, 0, 0),
+            22.3px 22.3px 111.7px rgba(0, 0, 0, 0),
+            41.8px 41.8px 208.9px rgba(0, 0, 0, 0),
+            100px 100px 500px rgba(0, 0, 0, 0);
+        }
+
+        .galeria a:hover{
+            box-shadow:
+            2.8px 2.8px 13.8px rgba(0, 0, 0, 0.011),
+            6.7px 6.7px 33.3px rgba(0, 0, 0, 0.016),
+            12.5px 12.5px 62.6px rgba(0, 0, 0, 0.02),
+            22.3px 22.3px 111.7px rgba(0, 0, 0, 0.024),
+            41.8px 41.8px 208.9px rgba(0, 0, 0, 0.029),
+            100px 100px 500px rgba(0, 0, 0, 0.04);
+        }
+
+        .galeria__img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: 0.3s;
+        }
+
+        .galeria__img:hover{
+            transform: scale(1.2);
+        }
+
+        .aos-init{
+            border: 2px solid var(--color-amarillo);
+        }
+
+    /* SERVICIOS */
+
+.servicios{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../multimedia/backgrounds/information-technology-specialist-at-work-2.png);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 40%;
+}
+
+.ul__servicios{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+}
+
+.li__servicios{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    width: 50rem;
+    height: 30rem;
+    margin: 1rem;
+    background-color: white;
+    border: 1px solid var(--color-amarillo);
+    box-shadow:
+    2.8px 2.8px 13.8px rgba(0, 0, 0, 0.011),
+    6.7px 6.7px 33.3px rgba(0, 0, 0, 0.016),
+    12.5px 12.5px 62.6px rgba(0, 0, 0, 0.02),
+    22.3px 22.3px 111.7px rgba(0, 0, 0, 0.024),
+    41.8px 41.8px 208.9px rgba(0, 0, 0, 0.029),
+    100px 100px 500px rgba(0, 0, 0, 0.04);
+}
+
+.li__servicios:hover{
+    background-color: var(--color-amarillo);
+    transform: scale(1.1);
+}
+
+.li__servicios_title{
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 0 1rem;
+}
+
+.li__servicios_p{
+    font-size: 1.5rem;
+    padding: 0 1rem;
+}
+
+.li__servicios_img{
+    width: 8rem;
+    height: 8rem;
+    margin: 2rem 0;
+}
+
+/* CONTACTO */
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+input{
+    width: 50rem;
+    height: 5rem;
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem 0;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+textarea{
+    width: 50rem;
+    height: 50%;
+    font-size: 2rem;
+    resize: none;
+    margin: 1rem 0;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 0.5rem;
+}
+
+
+input:focus, textarea:focus{
+    outline: 1px solid var(--color-naranja);
+}
+
+.btn__form{
+    width: 10rem;
+    height: 5rem;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border: none;
+    font-weight: lighter;
+    background-color: var(--color-negro);
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow:
+    2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
+    outline: 1px solid white;
+}
+
+.btn__form:hover{
+    background-color: var(--color-naranja);
+}
+
+/* FOOTER */
+
+footer{
+    user-select:text;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100;
+    margin: 0;
+    padding: 0;
+    height: 15rem;
+    background-color: var(--color-negro);
+    color: white;
+}
+
+.footer__div_principal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 50rem;
+}
+
+.footer__logo{
+    width: 13rem;
+    height: 13rem;
+    margin: 0 0.5rem;
+    border: 2px solid var(--color-negro);
+    border-radius: 100%;
+}
+
+.footer__div_datos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 13rem;
+}
+
+.footer__contacto{
+    display: flex;
+    flex-direction: column;
+}
+
+.redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes__logo{
+    width: 5rem;
+    height: 5rem;
+    margin: 0.5rem;
+    border-radius: 100%;
+    border: 2px solid white;
+    transition: 0.3s;
+}
+
+.redes__logo:hover{
+    transform: scale(1.2);
+}
+
+.footer__p{
+    font-size: 1.5rem;
+    margin: 0 0;
+    font-weight: lighter;
+    width: 100%;
+}
+
+
+/* MEDIAQUERIES */
+
+@media screen and (max-width: 1024px){
+    .wsp{
+        left: 87%;
+    }
+
+    .whatsapp{
+        width: 6rem;
+        height: 6rem;
+    }
+    
+}
+
+@media screen and (max-width: 991px){
+
+    .nav-item:hover{
+        background-color: var(--color-naranja);
+    }
+
+}
+
+@media screen and (max-width: 768px){
+
+    h1{
+        font-size: 3rem;
+    }
+
+    input, textarea{
+        width: 40rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    h1{
+        font-size: 2rem;
+    }
+
+    .text{
+        font-size: 1.8rem;
+    }
+
+    .wsp{
+        left: 83%;
+    }
+
+    .whatsapp{
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+    
+    .footer__p{
+        font-size: 1rem;
+    }
+
+    .redes__logo{
+        width: 4rem;
+        height: 4rem;
+    }
+
+    input, textarea{
+        width: 30rem;
+    }
+
+    .principal__logo{
+        width: 35rem;
+        height: 35rem;
+    }
+
+    .principal__logo{
+        width: 30rem;
+        height: 30rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    h1{
+        font-size: 1.8rem;
+    }
+
+    .text{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    h1{
+        font-size: 1.6rem;
+    }
+
+    .text{
+        font-size: 1.6rem;
+    }
+
+    .principal__logo{
+        width: 25rem;
+        height: 25rem;
+    }
+}
